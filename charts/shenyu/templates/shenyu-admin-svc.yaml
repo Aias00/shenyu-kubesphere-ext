@@ -4,7 +4,7 @@ apiVersion: v1
 kind: Service
 metadata:
   namespace: {{ .Release.Namespace }}
-  name: {{ template "common.names.fullname" . }}-admin
+  name: shenyu-admin
   labels:
     {{- include "shenyu.admin.labels" . | nindent 4 }}
 spec:

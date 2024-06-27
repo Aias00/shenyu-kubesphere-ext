@@ -3,14 +3,14 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   namespace: {{ .Release.Namespace }}
-  name: {{ template "common.names.fullname" . }}-bootstrap
+  name: shenyu-bootstrap
   labels:
     {{- include "shenyu.bootstrap.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ template "common.names.fullname" . }}-bootstrap
+    name: shenyu-bootstrap
   minReplicas: {{ .Values.bootstrap.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.bootstrap.autoscaling.maxReplicas }}
   metrics:

@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: {{ .Release.Namespace }}
-  name: {{ template "common.names.fullname" . }}-admin
+  name: shenyu-admin
   labels:
     {{- include "shenyu.admin.labels" . | nindent 4 }}
 spec:
@@ -140,7 +140,7 @@ spec:
         {{- end }}
         - name: shenyu-admin-config
           configMap:
-            name: {{ template "common.names.fullname" . }}-configmap
+            name: shenyu-configmap
             items:
             - key: application-admin.yml
               path: application.yml

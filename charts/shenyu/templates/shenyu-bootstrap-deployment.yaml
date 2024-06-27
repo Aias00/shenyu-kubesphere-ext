@@ -4,7 +4,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: {{ .Release.Namespace }}
-  name: {{ template "common.names.fullname" . }}-bootstrap
+  name: shenyu-bootstrap
   labels:
     {{- include "shenyu.bootstrap.labels" . | nindent 4 }}
 spec:
@@ -20,7 +20,7 @@ spec:
       volumes:
         - name: shenyu-bootstrap-config
           configMap:
-            name: {{ template "common.names.fullname" . }}-configmap
+            name: shenyu-configmap
             items:
               - key: application-bootstrap.yml
                 path: application.yml

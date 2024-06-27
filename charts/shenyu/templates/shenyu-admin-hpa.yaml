@@ -3,14 +3,14 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   namespace: {{ .Release.Namespace }}
-  name: {{ template "common.names.fullname" . }}-admin
+  name: shenyu-admin
   labels:
     {{- include "shenyu.admin.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ template "common.names.fullname" . }}-admin
+    name: shenyu-admin
   minReplicas: {{ .Values.admin.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.admin.autoscaling.maxReplicas }}
   metrics:
