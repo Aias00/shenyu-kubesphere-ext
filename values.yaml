@@ -1,0 +1,11 @@
+frontend:
+  enabled: true
+  image:
+    repository: kubespheredev/shenyu-frontend
+    tag: latest
+
+backend:
+  enabled: true
+  image:
+    repository: kubespheredev/shenyu-api
+    tag: latest

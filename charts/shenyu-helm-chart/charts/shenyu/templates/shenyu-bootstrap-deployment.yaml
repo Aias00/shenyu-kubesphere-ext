@@ -1,0 +1,55 @@
+{{- if .Values.bootstrap.enabled -}}
+# shenyu-bootstrap
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: {{ template "common.names.fullname" . }}-bootstrap
+  labels:
+    {{- include "shenyu.bootstrap.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "shenyu.bootstrap.selectorLabels" . | nindent 6 }}
+  replicas: {{ .Values.bootstrap.replicas }}
+  template:
+    metadata:
+      labels:
+        {{- include "shenyu.bootstrap.labels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: shenyu-bootstrap-config
+          configMap:
+            name: {{ template "common.names.fullname" . }}-configmap
+            items:
+              - key: application-bootstrap.yml
+                path: application.yml
+      containers:
+        - name: shenyu-bootstrap
+          image: {{ .Values.bootstrap.image }}:{{ required "A valid .Values.version entry required!" .Values.version }}
+          ports:
+            - containerPort: 9195
+          env:
+            - name: TZ
+              value: Asia/Beijing
+            - name: BOOT_JVM
+              value: {{ .Values.bootstrap.javaOpts | quote }}
+          resources:
+            {{- toYaml .Values.bootstrap.resources | nindent 12 }}
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 9195
+            periodSeconds: 5
+            failureThreshold: 12
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 9195
+            periodSeconds: 5
+            failureThreshold: 12
+          volumeMounts:
+            - name: shenyu-bootstrap-config
+              mountPath: /opt/shenyu-bootstrap/conf/application.yml
+              subPath: application.yml
+{{- end -}}

@@ -1,0 +1,19 @@
+{{- if .Values.bootstrap.enabled -}}
+# Now we only support NodePort mode
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: {{ template "common.names.fullname" . }}-bootstrap
+  labels:
+    {{- include "shenyu.bootstrap.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "shenyu.bootstrap.selectorLabels" . | nindent 4 }}
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: {{ .Values.bootstrap.service.port }}
+      targetPort: {{ .Values.bootstrap.service.targetPod }}
+      nodePort: {{ .Values.bootstrap.service.nodePort }}
+{{- end -}}

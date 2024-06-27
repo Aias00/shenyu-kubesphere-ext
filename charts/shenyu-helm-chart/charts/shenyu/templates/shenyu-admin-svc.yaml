@@ -1,0 +1,19 @@
+{{- if .Values.admin.enabled -}}
+# Now we only support NodePort mode
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: {{ template "common.names.fullname" . }}-admin
+  labels:
+    {{- include "shenyu.admin.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "shenyu.admin.selectorLabels" . | nindent 4 }}
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: {{ .Values.admin.service.port }}
+      targetPort: {{ .Values.admin.service.targetPod }}
+      nodePort: {{ .Values.admin.service.nodePort }}
+{{- end -}}
