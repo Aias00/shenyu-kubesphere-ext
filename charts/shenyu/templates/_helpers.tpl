@@ -33,6 +33,10 @@
 {{- end -}}
 
 
+{{- define "common.labels.standard" -}}
+app.kubernetes.io/component: shenyu
+{{- end -}}
+
 {{- define "shenyu.admin.labels" -}}
 {{ include "common.labels.standard" . }}
 app.kubernetes.io/component: shenyu-admin
