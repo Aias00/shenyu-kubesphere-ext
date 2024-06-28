@@ -40,12 +40,14 @@ spec:
             httpGet:
               path: /actuator/health/readiness
               port: 9195
+            initialDelaySeconds: 15
             periodSeconds: 5
             failureThreshold: 12
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
               port: 9195
+            initialDelaySeconds: 15
             periodSeconds: 5
             failureThreshold: 12
           volumeMounts:

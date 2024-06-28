@@ -13,7 +13,7 @@ shenyu:
       port: 9095
       targetPod: 9095
       # if you want to change "admin service port", please edit here
-      nodePort: 31095
+      nodePort: 9095
     # jvm options for admin
     javaOpts: ""
     # K8s resources quota for admin
@@ -54,7 +54,7 @@ shenyu:
       port: 9195
       targetPod: 9195
       # if you want to change "bootstrap service port", please edit here
-      nodePort: 31195
+      nodePort: 9195
     # jvm options for bootstrap
     javaOpts: ""
     # K8s resources quota for bootstrap

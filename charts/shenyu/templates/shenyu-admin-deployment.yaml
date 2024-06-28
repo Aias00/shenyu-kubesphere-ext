@@ -91,6 +91,7 @@ spec:
               # todo change it to /actuator/health/readiness when shenyu-admin support it
               path: /actuator/health
               port: 9095
+            initialDelaySeconds: 15
             periodSeconds: 5
             failureThreshold: 12
           livenessProbe:
@@ -98,6 +99,7 @@ spec:
               # todo change it to /actuator/health/liveness when shenyu-admin support it
               path: /actuator/health
               port: 9095
+            initialDelaySeconds: 15
             periodSeconds: 5
             failureThreshold: 12
           volumeMounts:
