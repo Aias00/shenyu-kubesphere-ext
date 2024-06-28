@@ -9,10 +9,10 @@ data:
   application-bootstrap.yml: |-
     {{- /* Put the whole application-bootstrap.yml here*/}}
     {{- /* "common.tplvalues.render" is used to render vars in values.yaml, especially the area of "sync.websocket" */}}
-    {{ .Values.applicationConfig.bootstrap | nindent 4 }}
+    {{- include "common.tplvalues.render" (dict "value" .Values.applicationConfig.bootstrap "context" $) | nindent 4 }}
   application-admin.yml: |-
     {{- /* similiar to application-bootstrap.yml*/}}
-    {{ .Values.applicationConfig.admin | nindent 4 }}
+    {{- include "common.tplvalues.render" (dict "value" .Values.applicationConfig.admin "context" $) | nindent 4 }}
   {{- if eq .Values.dataSource.active "h2" }}
   application-h2.yml: |-
     shenyu:
