@@ -1,0 +1,65 @@
+apiVersion: v1
+data:
+  index.js: 'System.register(["@kubed/components","@kubed/hooks","react"],(function(e,t){var
+    r={},n={},o={};return{setters:[function(e){r.Loading=e.Loading},function(){},function(e){o.default=e.default,o.useRef=e.useRef,o.useState=e.useState}],execute:function(){e(function(){var
+    e={795:function(e,t,r){var n={"./base.json":859};function o(e){var t=i(e);return
+    r(t)}function i(e){if(!r.o(n,e)){var t=new Error("Cannot find module ''"+e+"''");throw
+    t.code="MODULE_NOT_FOUND",t}return n[e]}o.keys=function(){return Object.keys(n)},o.resolve=i,e.exports=o,o.id=795},636:function(e,t,r){var
+    n={"./base.json":356};function o(e){var t=i(e);return r(t)}function i(e){if(!r.o(n,e)){var
+    t=new Error("Cannot find module ''"+e+"''");throw t.code="MODULE_NOT_FOUND",t}return
+    n[e]}o.keys=function(){return Object.keys(n)},o.resolve=i,e.exports=o,o.id=636},725:function(e,t,r){var
+    n=r(825).y;t.w=function(e){if(e||(e=1),!r.y.meta||!r.y.meta.url)throw console.error("__system_context__",r.y),Error("systemjs-webpack-interop
+    was provided an unknown SystemJS context. Expected context.meta.url, but none
+    was provided");r.p=n(r.y.meta.url,e)}},825:function(e,t,r){function n(e,t){var
+    r=document.createElement("a");r.href=e;for(var n="/"===r.pathname[0]?r.pathname:"/"+r.pathname,o=0,i=n.length;o!==t&&i>=0;){"/"===n[--i]&&o++}if(o!==t)throw
+    Error("systemjs-webpack-interop: rootDirectoryLevel ("+t+") is greater than the
+    number of directories ("+o+") in the URL path "+e);var u=n.slice(0,i+1);return
+    r.protocol+"//"+r.host+u}t.y=n;var o=Number.isInteger||function(e){return"number"==typeof
+    e&&isFinite(e)&&Math.floor(e)===e}},761:function(e){"use strict";e.exports=r},579:function(e){"use
+    strict";e.exports=n},726:function(e){"use strict";e.exports=o},859:function(e){"use
+    strict";e.exports=JSON.parse(''{"name":"Name","SHENYU_GATEWAY":"Shenyu Gateway"}'')},356:function(e){"use
+    strict";e.exports=JSON.parse(''{"name":"名称","SHENYU_GATEWAY":"Shenyu网关"}'')}},i={};function
+    u(t){var r=i[t];if(void 0!==r)return r.exports;var n=i[t]={exports:{}};return
+    e[t](n,n.exports,u),n.exports}u.y=t,u.g=function(){if("object"==typeof globalThis)return
+    globalThis;try{return this||new Function("return this")()}catch(e){if("object"==typeof
+    window)return window}}(),u.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},u.r=function(e){"undefined"!=typeof
+    Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},function(){var
+    e;u.g.importScripts&&(e=u.g.location+"");var t=u.g.document;if(!e&&t&&(t.currentScript&&(e=t.currentScript.src),!e)){var
+    r=t.getElementsByTagName("script");if(r.length)for(var n=r.length-1;n>-1&&(!e||!/^http(s?):/.test(e));)e=r[n--].src}if(!e)throw
+    new Error("Automatic publicPath is not supported in this browser");e=e.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),u.p=e}();var
+    c={};return(0,u(725).w)(1),function(){"use strict";u.r(c);var e=u(726);function
+    t(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=Array(t);r<t;r++)n[r]=e[r];return
+    n}function r(e,r){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var
+    r=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null!=r){var
+    n,o,i,u,c=[],a=!0,s=!1;try{if(i=(r=r.call(e)).next,0===t){if(Object(r)!==r)return;a=!1}else
+    for(;!(a=(n=i.call(r)).done)&&(c.push(n.value),c.length!==t);a=!0);}catch(e){s=!0,o=e}finally{try{if(!a&&null!=r.return&&(u=r.return(),Object(u)!==u))return}finally{if(s)throw
+    o}}return c}}(e,r)||function(e,r){if(e){if("string"==typeof e)return t(e,r);var
+    n={}.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?t(e,r):void
+    0}}(e,r)||function(){throw new TypeError("Invalid attempt to destructure non-iterable
+    instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]()
+    method.")}()}var n=u(761);u(579);function o(){var t=r((0,e.useState)(!0),2),o=t[0],i=t[1],u=(0,e.useRef)();return
+    e.default.createElement(e.default.Fragment,null,o&&e.default.createElement(n.Loading,{className:"page-loading"}),e.default.createElement("iframe",{ref:u,src:"/proxy/Shenyu/",width:"100%",height:"100%",frameBorder:"0",style:{height:"calc(100vh
+    - 68px)",display:o?"none":"block"},onLoad:function(){var e,t,r=null===(e=u.current)||void
+    0===e||null===(t=e.contentWindow)||void 0===t?void 0:t.document;r&&r.querySelector("#app
+    > div > div.header > div")&&(r.querySelector("#app > div > div.header > div").style.display="none"),i(!1)}}))}var
+    i=[{path:"/Shenyu",element:e.default.createElement(o,null)}];function a(e){return
+    a="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return
+    typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof
+    e},a(e)}function s(e){var t=function(e,t){if("object"!=a(e)||!e)return e;var r=e[Symbol.toPrimitive];if(void
+    0!==r){var n=r.call(e,t||"default");if("object"!=a(n))return n;throw new TypeError("@@toPrimitive
+    must return a primitive value.")}return("string"===t?String:Number)(e)}(e,"string");return"symbol"==a(t)?t:t+""}function
+    l(e,t,r){return(t=s(t))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function
+    f(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var n=Object.getOwnPropertySymbols(e);t&&(n=n.filter((function(t){return
+    Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,n)}return r}function
+    p(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?f(Object(r),!0).forEach((function(t){l(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):f(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return
+    e}for(var y=u(636),b=y.keys().filter((function(e){return"./index.ts"!==e})),d={},m=0;m<b.length;m+=1)b[m].startsWith(".")&&(d=p(p({},d),y(b[m])));var
+    v=d;function h(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var
+    n=Object.getOwnPropertySymbols(e);t&&(n=n.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,n)}return
+    r}function g(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?h(Object(r),!0).forEach((function(t){l(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):h(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return
+    e}for(var O=u(795),w=O.keys().filter((function(e){return"./index.ts"!==e})),j={},S=0;S<w.length;S+=1)w[S].startsWith(".")&&(j=g(g({},j),O(w[S])));var
+    E={routes:i,menus:[{parent:"topbar",name:"Shenyu",title:"SHENYU_GATEWAY",icon:"cluster",order:10,desc:"Take
+    control of APIs across",skipAuth:!0}],locales:{zh:v,en:j}};globals.context.registerExtension(E)}(),c}())}}}));'
+kind: ConfigMap
+metadata:
+  name: {{ include "frontend.fullname" . }}-ks-frontend
+  namespace: {{ .Release.Namespace }}

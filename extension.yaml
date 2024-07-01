@@ -6,15 +6,14 @@ dependencies:
   tags:
   - extension
 description:
-  en: API gateway built for hybrid and multi-cloud, optimized for microservices and
-    distributed architectures
-  zh: Shenyu 网关是一个轻量级、快速且灵活的云原生 API 网关
+  en: Shenyu is an asynchronous, high-performance, cross-language, responsive API gateway.
+  zh: Shenyu 是一个异步的，高性能的，跨语言的，响应式的 API 网关
 displayName:
   en: Shenyu Gateway
   zh: Shenyu 网关
-docs: https://docs.konghq.com/gateway/latest/
-home: https://www.gingxing.com/
-icon: https://ks-extension.pek3b.qingstor.com/users/515547262110198587/kong/1.0.5/favicon.svg
+docs: https://shenyu.apache.org/document/
+home: https://shenyu.apache.org/zh/
+icon: https://shenyu.apache.org/img/favicon.svg
 installationMode: HostOnly
 keywords:
 - networking
@@ -27,24 +26,24 @@ keywords:
 ksVersion: '>=4.0.0-0'
 kubeVersion: '>=1.19.0-0'
 maintainers:
-- email: mark.gao@gingxing.com
-  name: mark
-  url: https://www.gingxing.com/
+- email: rokkki@163.com
+  name: aias00
+  url: https://github.com/Aias00/
 name: shenyu
 provider:
   en:
-    email: consultant@gingxing.com
-    name: gingxing
-    url: https://www.gingxing.com/
+    email: rokkki@163.com
+    name: aias00
+    url: https://github.com/Aias00/
   zh:
-    email: consultant@gingxing.com
-    name: 上海金猩信息科技有限公司
-    url: https://www.gingxing.com/
+    email: rokkki@163.com
+    name: aias00
+    url: https://github.com/Aias00/
 screenshots:
-- https://ks-extension.pek3b.qingstor.com/users/515547262110198587/kong/1.0.5/s3.png
+- https://shenyu.apache.org/zh/img/logo.svg
 - https://ks-extension.pek3b.qingstor.com/users/515547262110198587/kong/1.0.5/s2.png
 - https://ks-extension.pek3b.qingstor.com/users/515547262110198587/kong/1.0.5/s4.png
-- https://ks-extension.pek3b.qingstor.com/users/515547262110198587/kong/1.0.5/s1.png
+- https://shenyu.apache.org/img/shenyu/activite/shenyu-xmind.png
 sources:
-- https://github.com/Kong/charts
-version: 1.0.11
+- https://github.com/apache/shenyu-helm-chart
+version: 1.0.17
