@@ -38,11 +38,11 @@ data:
     0}}(e,r)||function(){throw new TypeError("Invalid attempt to destructure non-iterable
     instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]()
     method.")}()}var n=u(761);u(579);function o(){var t=r((0,e.useState)(!0),2),o=t[0],i=t[1],u=(0,e.useRef)();return
-    e.default.createElement(e.default.Fragment,null,o&&e.default.createElement(n.Loading,{className:"page-loading"}),e.default.createElement("iframe",{ref:u,src:"/proxy/Shenyu/",width:"100%",height:"100%",frameBorder:"0",style:{height:"calc(100vh
+    e.default.createElement(e.default.Fragment,null,o&&e.default.createElement(n.Loading,{className:"page-loading"}),e.default.createElement("iframe",{ref:u,src:"/proxy/shenyu/",width:"100%",height:"100%",frameBorder:"0",style:{height:"calc(100vh
     - 68px)",display:o?"none":"block"},onLoad:function(){var e,t,r=null===(e=u.current)||void
     0===e||null===(t=e.contentWindow)||void 0===t?void 0:t.document;r&&r.querySelector("#app
     > div > div.header > div")&&(r.querySelector("#app > div > div.header > div").style.display="none"),i(!1)}}))}var
-    i=[{path:"/Shenyu",element:e.default.createElement(o,null)}];function a(e){return
+    i=[{path:"/shenyu",element:e.default.createElement(o,null)}];function a(e){return
     a="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return
     typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof
     e},a(e)}function s(e){var t=function(e,t){if("object"!=a(e)||!e)return e;var r=e[Symbol.toPrimitive];if(void
@@ -57,7 +57,7 @@ data:
     n=Object.getOwnPropertySymbols(e);t&&(n=n.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,n)}return
     r}function g(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?h(Object(r),!0).forEach((function(t){l(e,t,r[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):h(Object(r)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))}))}return
     e}for(var O=u(795),w=O.keys().filter((function(e){return"./index.ts"!==e})),j={},S=0;S<w.length;S+=1)w[S].startsWith(".")&&(j=g(g({},j),O(w[S])));var
-    E={routes:i,menus:[{parent:"topbar",name:"Shenyu",title:"SHENYU_GATEWAY",icon:"cluster",order:10,desc:"Take
+    E={routes:i,menus:[{parent:"topbar",name:"shenyu",title:"SHENYU_GATEWAY",icon:"cluster",order:10,desc:"Take
     control of APIs across",skipAuth:!0}],locales:{zh:v,en:j}};globals.context.registerExtension(E)}(),c}())}}}));'
 kind: ConfigMap
 metadata:

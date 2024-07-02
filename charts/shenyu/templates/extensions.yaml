@@ -1,0 +1,16 @@
+apiVersion: extensions.kubesphere.io/v1alpha1
+kind: ReverseProxy
+metadata:
+  name: shenyu-scope
+spec:
+  directives:
+    headerUp:
+    - -Authorization
+    # stripPathPrefix: /proxy/kong
+  matcher:
+    method: '*'
+    path: /proxy/shenyu/*
+  upstream:
+    url: http://shenyu-admin.{{ .Release.Namespace }}:9095
+status:
+  state: Available
