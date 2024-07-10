@@ -24,6 +24,18 @@
 
 ---
 
+## 前置条件
+
+手动安装一个ingress控制器, 默认设置为NodePort模式,端口30888, 在您熟悉整个流程前, 建议不要调整
+
+```bash
+helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace \
+  --set controller.service.type=NodePort \
+  --set controller.service.nodePorts.http=30888
+```
+
 # 脑图
 
 ![](https://shenyu.apache.org/img/shenyu/activite/shenyu-xmind.png)

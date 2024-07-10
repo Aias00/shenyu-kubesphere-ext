@@ -13,6 +13,18 @@ ShenYu (神禹) is the honorific name of Chinese ancient monarch Xia Yu (also kn
 
 ---
 
+## 前置条件
+
+Manually install an ingress controller and set it to NodePort mode by default, with port 30888. It is recommended not to make adjustments until you are familiar with the entire process.
+
+```bash
+helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace \
+  --set controller.service.type=NodePort \
+  --set controller.service.nodePorts.http=30888
+```
+
 # Features
 
 * Proxy: Support for Apache® Dubbo™, Spring Cloud, gRPC, Motan, SOFA, TARS, WebSocket, MQTT
