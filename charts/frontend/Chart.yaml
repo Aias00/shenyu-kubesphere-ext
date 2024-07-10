@@ -1,11 +1,6 @@
-annotations:
-  extensions.kubesphere.io/foo: bar
 apiVersion: v2
-appVersion: 0.0.1
-description: Frontend of ks-kong extension.
-home: https://kubesphere.io
 name: frontend
-sources:
-- https://github.com/kubesphere
+description: A Helm chart for Kubernetes
 type: application
-version: 0.0.1
+version: 0.1.0
+appVersion: "1.16.0"
