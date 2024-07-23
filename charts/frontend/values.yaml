@@ -6,7 +6,7 @@ domain: localhost
 # 挂载位置 e.g. topbar,global,toolbox,access,cluster,workspace,project,platformSettings
 extParent: topbar
 # ui的超链接名称
-extTitle: shenyu
+extTitle: ShenYu 网关
 # 扩展包描述
 extDesc: "this is a simple extension"
 # ingress controller 对外服务的Node端口

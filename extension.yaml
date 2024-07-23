@@ -26,19 +26,19 @@ keywords:
 ksVersion: '>=4.0.0-0'
 kubeVersion: '>=1.19.0-0'
 maintainers:
-- email: rokkki@163.com
-  name: aias00
-  url: https://github.com/Aias00/
+- email: dev@shenyu.apache.org
+  name: Apache ShenYu 社区
+  url: https://github.com/apache/shenyu
 name: shenyu
 provider:
   en:
-    email: rokkki@163.com
-    name: aias00
-    url: https://github.com/Aias00/
+    email: dev@shenyu.apache.org
+    name: Apache ShenYu 社区
+    url: https://github.com/apache/shenyu
   zh:
-    email: rokkki@163.com
-    name: aias00
-    url: https://github.com/Aias00/
+    email: dev@shenyu.apache.org
+    name: Apache ShenYu 社区
+    url: https://github.com/apache/shenyu
 screenshots:
 - https://shenyu.apache.org/zh/img/logo.svg
 - https://shenyu.apache.org/zh/img/home/2_1.jpg
@@ -50,4 +50,4 @@ screenshots:
 - https://shenyu.apache.org/img/shenyu/activite/shenyu-xmind.png
 sources:
 - https://github.com/apache/shenyu-helm-chart
-version: 1.1.20
+version: 1.1.28

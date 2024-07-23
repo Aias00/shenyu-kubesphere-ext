@@ -1,2 +1,2 @@
-2.5.1
-扩展组件的初始发布，支持社区版本2.5.1
+### 1.1.25
+- Initial release of extension components, supporting community version 2.5.1
