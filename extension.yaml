@@ -1,16 +1,16 @@
 apiVersion: kubesphere.io/v1alpha1
 category: networking
 dependencies:
-- name: shenyu
+- name: Apache Shenyu
   repository: ""
   tags:
   - extension
 description:
-  en: Shenyu is an asynchronous, high-performance, cross-language, responsive API gateway.
-  zh: Shenyu 是一个异步的，高性能的，跨语言的，响应式的 API 网关
+  en: Apache Shenyu is an asynchronous, high-performance, cross-language, responsive API gateway.
+  zh: Apache Shenyu 是一个异步的，高性能的，跨语言的，响应式的 API 网关
 displayName:
-  en: Shenyu Gateway
-  zh: Shenyu 网关
+  en: Apache Shenyu Gateway
+  zh: Apache Shenyu 网关
 docs: https://shenyu.apache.org/document/
 home: https://shenyu.apache.org/zh/
 icon: https://shenyu.apache.org/img/favicon.svg
@@ -50,4 +50,4 @@ screenshots:
 - https://shenyu.apache.org/img/shenyu/activite/shenyu-xmind.png
 sources:
 - https://github.com/apache/shenyu-helm-chart
-version: 1.1.32
+version: 1.1.33
